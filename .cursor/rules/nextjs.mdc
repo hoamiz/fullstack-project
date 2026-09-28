@@ -1,0 +1,11 @@
+---
+description: Quy tắc khi sửa Next.js App Router
+globs: app/**/*,components/**/*,lib/**/*
+alwaysApply: false
+---
+
+- Trước khi sửa API hoặc hành vi đặc thù của Next.js, đọc tài liệu tương ứng trong node_modules/next/dist/docs/.
+- Dùng App Router; giữ Server Component làm mặc định, chỉ dùng "use client" khi cần tương tác hoặc browser API.
+- Với dynamic route, kiểm tra kiểu params và await params theo phiên bản Next.js đang cài.
+- Xử lý rõ trạng thái loading, lỗi và slug không tồn tại khi tính năng cần chúng.
+- Không tạo Next Route Handler trùng chức năng với Node API riêng nếu task không yêu cầu.

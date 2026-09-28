@@ -1,0 +1,10 @@
+---
+description: Giải thích các phần Node.js, PostgreSQL và Next.js quan trọng để chủ dự án học
+alwaysApply: true
+---
+
+- Khi làm một tính năng mới, giải thích ngắn luồng dữ liệu và lý do chọn cách làm.
+- Với Node.js, chỉ rõ request đi qua route/middleware nào và lỗi được xử lý ở đâu.
+- Với PostgreSQL, cho biết truy vấn SQL tương ứng với thao tác ORM quan trọng.
+- Ưu tiên giải pháp đơn giản, có thể giải thích được. Không thêm abstraction chỉ để chuẩn bị cho nhu cầu chưa có.
+- Kết thúc task bằng 2–3 câu hỏi tự kiểm tra kiến thức liên quan trực tiếp đến phần vừa làm.

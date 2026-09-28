@@ -1,0 +1,32 @@
+{
+  "name": "fullstack-project",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "dev:fe": "next dev",
+    "dev:api": "npm --prefix apps/api run dev --watch",
+    "build": "next build",
+    "build:api": "npm --prefix apps/api run build",
+    "start": "next start",
+    "start:api": "npm --prefix apps/api run start",
+    "db:setup": "npm --prefix apps/api run db:setup",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
+  },
+  "dependencies": {
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

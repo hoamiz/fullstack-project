@@ -1,0 +1,16 @@
+---
+description: Sau mỗi thay đổi, ghi ngắn vào CONTEXT.md
+alwaysApply: true
+---
+
+# Brief change to CONTEXT.md
+
+Khi một task đổi trạng thái dự án, cập nhật `CONTEXT.md` trong cùng lần sửa. Giữ ghi chú ngắn.
+
+- Đổi ngày ở đầu file.
+- Sửa đúng câu đã sai. Không viết lại cả file, không dán code.
+- Thêm một gạch đầu dòng: ngày, việc đã làm, chỗ nằm, phần còn chưa làm.
+
+```markdown
+- 2026-09-28: Thêm `apps/api` — GET /projects và GET /projects/:slug. Frontend chưa gọi API. Chưa có PostgreSQL.
+```

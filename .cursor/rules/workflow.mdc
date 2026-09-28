@@ -1,0 +1,11 @@
+---
+description: Giữ task nhỏ, kiểm tra thay đổi và báo cáo trung thực
+alwaysApply: true
+---
+
+- Trước khi sửa, đọc CONTEXT.md và các file liên quan.
+- Chỉ sửa phần cần thiết cho yêu cầu hiện tại. Không tự thêm tính năng, dependency hoặc refactor ngoài phạm vi.
+- Với task đụng nhiều lớp (web, API, database), nêu kế hoạch và danh sách file dự kiến trước khi triển khai.
+- Sau khi sửa, chạy các lệnh kiểm tra phù hợp đang có trong package.json. Không nói đã kiểm tra nếu chưa chạy.
+- Cuối task, báo ngắn: đã sửa gì, file nào, lệnh nào đã chạy và kết quả, phần nào chưa hoàn thành.
+- Nếu thiếu thông tin quyết định kiến trúc, nêu giả định hoặc hỏi trước khi triển khai.
