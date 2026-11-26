@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject } from "@/lib/projects";
+import { RecordPageView } from "@/components/record-page-view";
 
 type ProjectPageProps = {
   params: Promise<{ slug: string }>;
@@ -33,6 +34,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-6 px-6 py-16">
+      
+      <RecordPageView path={`/projects/${slug}`} />
       <Link
         href="/projects"
         className="text-sm text-zinc-500 hover:text-foreground"

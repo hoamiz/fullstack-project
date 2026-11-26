@@ -5,5 +5,7 @@ CREATE TABLE IF NOT EXISTS projects (
   summary     text    NOT NULL,
   description text    NOT NULL,
   stack       text[]  NOT NULL DEFAULT '{}',
-  year        integer NOT NULL
+  year        integer NOT NULL,
+  status      text    NOT NULL DEFAULT 'published'
+              CHECK (status IN ('draft', 'published'))
 );

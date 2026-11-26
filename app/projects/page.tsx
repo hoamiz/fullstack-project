@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ProjectCard } from "@/components/project-card";
 import { getProjects } from "@/lib/projects";
+import { RecordPageView } from "@/components/record-page-view";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -13,7 +14,7 @@ async function ProjectList() {
 
   return (
     <ul className="flex flex-col gap-4">
-        {projects.map((project) => (
+      {projects.map((project) => (
         <li key={project.slug}>
           <ProjectCard project={project} />
         </li>
@@ -22,9 +23,10 @@ async function ProjectList() {
   );
 }
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
   return (
     <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col gap-8 px-6 py-16">
+      <RecordPageView path="/projects" />
       <div className="flex flex-col gap-2">
         <h1 className="text-3xl font-semibold tracking-tight">Projects</h1>
         <p className="text-zinc-600 dark:text-zinc-400">
@@ -33,7 +35,9 @@ export default function ProjectsPage() {
       </div>
       <Suspense
         fallback={
-          <p className="text-zinc-600 dark:text-zinc-400">Đang tải projects...</p>
+          <p className="text-zinc-600 dark:text-zinc-400">
+            Đang tải projects...
+          </p>
         }
       >
         <ProjectList />

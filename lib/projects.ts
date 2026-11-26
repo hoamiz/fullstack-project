@@ -5,9 +5,10 @@ export type Project = {
   description: string;
   stack: string[];
   year: number;
+  status: "draft" | "published";
 };
 
-const apiUrl = process.env.API_URL ?? "http://localhost:4000";
+export const apiUrl = process.env.API_URL ?? "http://localhost:4000";
 
 export async function getProjects(): Promise<Project[]> {
   const response = await fetch(`${apiUrl}/projects`, { cache: "no-store" });
